@@ -3,14 +3,16 @@ import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
 import Color from '../utils/Colors';
 
 const Button = (props) => {
-  const {title = 'Enter', style = {}, testSte = (yle = {}), onPress} = props;
+  const {title = 'Enter', style = {}, testStyle = {}, onPress} = props;
+  // onPress = () => {
+  //   console.log('hi');
+  // };
 
   return (
     <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
-
-   <Text style={[styles.text, style]}>{title}</Text>
-		</TouchableOpacity>
-
+      <Text style={[styles.text, style]}>{title}</Text>
+    </TouchableOpacity>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -18,8 +20,8 @@ const styles = StyleSheet.create({
     display: 'flex',
     height: 50,
     borderRadius: 5,
-    paddingLeft: 20,
-    paddingRight: 20,
+    paddingLeft: 50,
+    paddingRight: 50,
     justifyContent: 'center',
     alignItems: 'center',
     margin: 20,
@@ -35,3 +37,5 @@ const styles = StyleSheet.create({
     color: Color.white,
   },
 });
+
+export default Button;
