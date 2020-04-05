@@ -7,5 +7,6 @@ const Color = {
   lightshgray: '#9d9d9d',
   smoke: '#eeeeee',
   green: '#219653',
+  red: '#f00',
 };
 export default Color;

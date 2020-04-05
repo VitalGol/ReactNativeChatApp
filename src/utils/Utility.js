@@ -1,7 +1,6 @@
 export default class Utility {
   static isValidField = (term) => {
     let length = term.trim().length;
-    // console.log('valid - ', length);
     return length > 0 ? true : false;
   };
 
