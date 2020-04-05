@@ -1,4 +1,4 @@
-export default const color = {
+const Color = {
   black: '#000000',
   white: '#ffffff',
   theme: '#232323',
@@ -8,3 +8,4 @@ export default const color = {
   smoke: '#eeeeee',
   green: '#219653',
 };
+export default Color;

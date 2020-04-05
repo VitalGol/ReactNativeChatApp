@@ -11,9 +11,6 @@ import {StyleSheet, Text, View} from 'react-native';
 const Stack = createStackNavigator();
 
 function MyStack(props) {
-  // let props.initialRouteName = 'one';
-  // console.log(options);
-
   return (
     <Stack.Navigator name="chat">
       <Stack.Screen
