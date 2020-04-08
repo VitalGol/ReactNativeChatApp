@@ -49,14 +49,18 @@ const SignInScreen = () => {
               term={email}
               error={emailError}
               placeHolder={String.EmailPlaceHolder}
-              onTermChange={(newEmail) => setEmail(newEmail)}
+              onTermChange={(newEmail) => {
+                setEmail(newEmail);
+              }}
               onValidateEmailAddress={validateEmailAddress}
             />
             <PasswordTextField
               term={password}
               error={passwordError}
               placeHolder={String.PasswordPlaceHolder}
-              onTermChange={(newPassword) => setPassword(newPassword)}
+              onTermChange={(newPassword) => {
+                setPassword(newPassword);
+              }}
               onValidatePasswordField={validatePasswordField}
             />
             <Button title={String.Join} />

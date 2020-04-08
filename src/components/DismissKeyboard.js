@@ -1,5 +1,11 @@
 import React from 'react';
-import {View, Text, TouchableWithoutFeedback, Keyboard} from 'react-native';
+import {
+  View,
+  Text,
+  TouchableWithoutFeedback,
+  Keyboard,
+  Image,
+} from 'react-native';
 
 const DismissKeyboard = ({children}) => {
   return (
