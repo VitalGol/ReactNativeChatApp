@@ -18,6 +18,10 @@ const PasswordTextField = ({
           autoCorrect={false}
           style={styles.textField}
           placeholder={placeHolder}
+          placeholderTextColor={Color.green}
+          // keyboardAppearance={'red'}
+          maxLength={10}
+          secureTextEntry
           value={term}
           onChangeText={onTermChange}
           onEndEditing={onValidatePasswordField}

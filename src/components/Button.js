@@ -1,18 +1,42 @@
-import React, {Component} from 'react';
-import {Text, StyleSheet, View, TouchableOpacity} from 'react-native';
+import React from 'react';
+import {
+  Text,
+  StyleSheet,
+  TouchableOpacity,
+  ActivityIndicator,
+  ActivityIndicatorBase,
+  View,
+} from 'react-native';
 import Color from '../utils/Colors';
 
 const Button = (props) => {
-  const {title = 'Enter', style = {}, testStyle = {}, onPress} = props;
+  const {
+    title = 'Enter',
+    style = {},
+    textStyle = {},
+    onPress,
+    isLoading,
+  } = props;
+
+  const loader = () => {
+    return <ActivityIndicator animating={isLoading} />;
+  };
+
+  const button = () => {
+    return (
+      <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
+        <Text style={[styles.text, textStyle]}>{title}</Text>
+      </TouchableOpacity>
+    );
+  };
+  return (
+    <View style={[styles.button, style]}>
+      {isLoading ? loader() : button()}
+    </View>
+  );
   // onPress = () => {
   //   console.log('hi');
   // };
-
-  return (
-    <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
-      <Text style={[styles.text, style]}>{title}</Text>
-    </TouchableOpacity>
-  );
 };
 
 const styles = StyleSheet.create({
